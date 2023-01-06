@@ -1,0 +1,20 @@
+- defaults:
+    shell:
+        stdin: true
+        stdout: true
+        stderr: true
+    link:
+        relink: true
+        force: true
+        create: true
+
+- link:
+    ~/:
+      glob: true
+      path: dotfiles/*
+      prefix: '.'
+    ~/.zshrc:
+        path: codespaces/dotfiles/zshrc
+
+# - shell:
+#     - ./codespaces/scripts/install-tools.sh

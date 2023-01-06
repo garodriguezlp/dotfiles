@@ -1,0 +1,22 @@
+[user]
+    name = Gustavo Adolfo Rodriguez
+    email = 1432287+garodriguezlp@users.noreply.github.com
+[alias]
+    ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+[core]
+    autocrlf = input
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+[delta]
+    navigate = true     # use n and N to move between diff sections
+    side-by-side = true # show side-by-side diffs
+    line-numbers = true # show line numbers
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[includeIf "gitdir:~/src/milli/"]
+    path = ~/.gitconfig-milli

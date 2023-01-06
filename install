@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -e
+
+DOTBOT_DIR="dotbot"
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEFAULT_CONFIG="./codespaces/dotbot/config.yaml"
+
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+if [ $# -eq 0 ]; then
+    CONFIG="${DEFAULT_CONFIG}"
+else
+    CONFIG="$1"
+    shift
+fi
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "$@"
