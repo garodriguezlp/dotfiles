@@ -15,6 +15,3 @@
       prefix: '.'
     ~/.zshrc:
         path: codespaces/dotfiles/zshrc
-
-# - shell:
-#     - ./codespaces/scripts/install-tools.sh
