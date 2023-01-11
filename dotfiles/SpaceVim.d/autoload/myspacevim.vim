@@ -17,6 +17,6 @@ function! myspacevim#after() abort
         \ }
 
   " enables displaying hidden characters
-  setlocal list
+  " setlocal list
 
 endfunction
