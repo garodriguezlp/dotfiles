@@ -97,7 +97,6 @@ z4h load   ohmyzsh/ohmyzsh/plugins/web-search
 z4h load   garodriguezlp/dotfiles/plugins/fzf
 z4h load   garodriguezlp/dotfiles/plugins/jbang
 z4h load   garodriguezlp/dotfiles/plugins/key-bindings
-z4h load   garodriguezlp/dotfiles/plugins/milli
 z4h load   garodriguezlp/dotfiles/plugins/nvim
 z4h load   garodriguezlp/dotfiles/plugins/sdk
 
