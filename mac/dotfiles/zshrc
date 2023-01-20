@@ -95,6 +95,7 @@ z4h load   garodriguezlp/dotfiles/plugins/fzf
 z4h load   garodriguezlp/dotfiles/plugins/jbang
 z4h load   garodriguezlp/dotfiles/plugins/key-bindings
 z4h load   garodriguezlp/dotfiles/plugins/milli-glab
+z4h load   garodriguezlp/dotfiles/plugins/milli-misc
 z4h load   garodriguezlp/dotfiles/plugins/node-16-homebrew
 z4h load   garodriguezlp/dotfiles/plugins/nvim
 z4h load   garodriguezlp/dotfiles/plugins/sdk
