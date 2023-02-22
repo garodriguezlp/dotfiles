@@ -40,7 +40,7 @@ fun glab-issue-assign-to-me() {
         --repo $GITLAB_G_BACLOG_PROJECT \
         --unlabel "status::todo" \
         --label "status::doing" \
-        --assignee $GITLAB_USER
+        --assignee $GITLAB_G_USER
 }
 
 # --- -----------------------------------------------------------------------
