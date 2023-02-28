@@ -17,8 +17,8 @@ zstyle ':z4h:' prompt-at-bottom 'no'
 zstyle ':z4h:bindkey' keyboard  'mac'
 
 # Start tmux if not already in tmux.
-# zstyle ':z4h:' start-tmux       command tmux -u new -A -D -t z4h
-zstyle ':z4h:' start-tmux system
+zstyle ':z4h:' start-tmux       command tmux -u new -D -t z4h
+# zstyle ':z4h:' start-tmux system
 
 # Mark up shell's output with semantic information.
 zstyle ':z4h:' term-shell-integration 'yes'
