@@ -78,6 +78,7 @@ z4h load   ohmyzsh/ohmyzsh/plugins/aliases
 z4h load   ohmyzsh/ohmyzsh/plugins/autojump
 z4h load   ohmyzsh/ohmyzsh/plugins/brew
 z4h load   ohmyzsh/ohmyzsh/plugins/common-aliases
+z4h load   ohmyzsh/ohmyzsh/plugins/direnv
 z4h load   ohmyzsh/ohmyzsh/plugins/extract
 z4h load   ohmyzsh/ohmyzsh/plugins/fzf
 z4h load   ohmyzsh/ohmyzsh/plugins/git
