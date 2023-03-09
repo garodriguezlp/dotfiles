@@ -95,13 +95,13 @@ z4h load   ohmyzsh/ohmyzsh/plugins/web-search
 z4h load   garodriguezlp/dotfiles/plugins/fzf
 z4h load   garodriguezlp/dotfiles/plugins/jbang
 z4h load   garodriguezlp/dotfiles/plugins/key-bindings
-z4h load   garodriguezlp/dotfiles/plugins/milli-glab
 z4h load   garodriguezlp/dotfiles/plugins/milli-misc
 z4h load   garodriguezlp/dotfiles/plugins/milli-cli
 z4h load   garodriguezlp/dotfiles/plugins/node-16-homebrew
 z4h load   garodriguezlp/dotfiles/plugins/nvim
 z4h load   garodriguezlp/dotfiles/plugins/sdk
 z4h load   /Users/gustavo.rodriguezl/src/milli/gustavo/zsh-plugins/milli-app
+z4h load   /Users/gustavo.rodriguezl/src/milli/gustavo/zsh-plugins/milli-glab
 
 # In order to avoid conflicts with `sdkman` this needs to be loaded after
 z4h load   ohmyzsh/ohmyzsh/plugins/jenv
