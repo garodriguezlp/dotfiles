@@ -101,10 +101,10 @@ z4h load   garodriguezlp/dotfiles/plugins/node-16-homebrew
 z4h load   garodriguezlp/dotfiles/plugins/nvim
 z4h load   garodriguezlp/dotfiles/plugins/sdk
 z4h load   garodriguezlp/dotfiles/plugins/fun
-z4h load   $home/src/milli/gustavo/zsh-plugins/milli-app
-z4h load   $home/src/milli/gustavo/zsh-plugins/milli-glab
+z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
+z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
 
-z4h source   $home/.secrets.zsh
+z4h source   $HOME/.secrets.zsh
 
 # In order to avoid conflicts with `sdkman` this needs to be loaded after
 z4h load   ohmyzsh/ohmyzsh/plugins/jenv
