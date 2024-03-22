@@ -1,1 +1,1 @@
-export AWS_PROFILE=milli-dev
+# export AWS_PROFILE=milli-dev

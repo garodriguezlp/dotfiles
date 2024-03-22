@@ -92,6 +92,7 @@ z4h load   ohmyzsh/ohmyzsh/plugins/nvm
 z4h load   ohmyzsh/ohmyzsh/plugins/sdk
 z4h load   ohmyzsh/ohmyzsh/plugins/thefuck
 z4h load   ohmyzsh/ohmyzsh/plugins/tmux
+z4h load   ohmyzsh/ohmyzsh/plugins/chruby
 z4h load   ohmyzsh/ohmyzsh/plugins/web-search
 
 z4h load   garodriguezlp/dotfiles/plugins/fzf
@@ -99,13 +100,11 @@ z4h load   garodriguezlp/dotfiles/plugins/jbang
 z4h load   garodriguezlp/dotfiles/plugins/key-bindings
 z4h load   garodriguezlp/dotfiles/plugins/milli-misc
 z4h load   garodriguezlp/dotfiles/plugins/milli-cli
-z4h load   garodriguezlp/dotfiles/plugins/node-16-homebrew
 z4h load   garodriguezlp/dotfiles/plugins/nvim
 z4h load   garodriguezlp/dotfiles/plugins/sdk
 z4h load   garodriguezlp/dotfiles/plugins/fun
 z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
 z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
-
 
 z4h source   $HOME/.secrets.zsh
 
@@ -137,9 +136,12 @@ alias tree='tree -a -I .git'
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
 
-
 z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
+
+# Mino mobile
+RUBIES+=($(brew --prefix)/opt/ruby@*)
+chruby ruby@3.1
