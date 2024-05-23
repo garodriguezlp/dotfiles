@@ -15,5 +15,5 @@ function love() {
 function pills() {
     echo "Sending pills reminder to your love... 💊"
     echo "Opening web whatsapp for number: ${LOVE_NUMBER}"
-    open "https://web.whatsapp.com/send/?phone=%2B57${LOVE_NUMBER}&text=Baby%2C%20don%27t%20forget%20to%20take%20your%20pills.%20Love%20you%20so%20much%21&app_absent=0"
+    open "https://web.whatsapp.com/send/?phone=%2B57${LOVE_NUMBER}&text=Baby%2C%20don%27t%20forget%20to%20take%20your%20pills.%20Love%20you%20so%20much%21%20%F0%9F%98%98&app_absent=0"
 }
