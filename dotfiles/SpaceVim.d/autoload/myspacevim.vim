@@ -1,22 +1,26 @@
 function! myspacevim#before() abort
-
-  " enables autosaving
-  set autowrite
-  autocmd InsertLeave,TextChanged,FocusLost,BufLeave * silent! update
-
+  call s:enableAutoSave()
 endfunction
 
 function! myspacevim#after() abort
+  call s:enableSystemClipboard()
+  call s:configureCopilot()
+endfunction
 
-  " enables the use of the system clipboard
+function! s:enableAutoSave() abort
+  set autowrite
+  autocmd InsertLeave,TextChanged,FocusLost,BufLeave * silent! update
+endfunction
+
+function! s:enableSystemClipboard() abort
   set clipboard+=unnamed
+endfunction
 
-  " enable copilot for git commit messages
+function! s:configureCopilot() abort
+  imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+  let g:copilot_no_tab_map = v:true
+
   let g:copilot_filetypes = {
         \ 'gitcommit': v:true,
         \ }
-
-  " enables displaying hidden characters
-  " setlocal list
-
 endfunction
