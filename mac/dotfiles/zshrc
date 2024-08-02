@@ -78,9 +78,9 @@ z4h load   ohmyzsh/ohmyzsh/plugins/httpie
 z4h load   ohmyzsh/ohmyzsh/plugins/sdk
 z4h load   ohmyzsh/ohmyzsh/plugins/chruby
 
-z4h load   garodriguezlp/dotfiles/plugins/jbang
-z4h load   garodriguezlp/dotfiles/plugins/key-bindings
-z4h load   garodriguezlp/dotfiles/plugins/sdk
+z4h load   -c garodriguezlp/dotfiles/plugins/jbang
+z4h load   -c garodriguezlp/dotfiles/plugins/key-bindings
+z4h load   -c garodriguezlp/dotfiles/plugins/sdk
 
 z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
 z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
