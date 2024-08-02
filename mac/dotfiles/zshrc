@@ -27,7 +27,8 @@ zstyle ':z4h:' term-shell-integration 'yes'
 zstyle ':z4h:autosuggestions' forward-char 'accept'
 
 # Recursively traverse directories when TAB-completing files.
-zstyle ':z4h:fzf-complete' recurse-dirs 'no'
+zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
+zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
 
 # Enable direnv to automatically source .envrc files.
 zstyle ':z4h:direnv'         enable 'no'
@@ -72,8 +73,19 @@ z4h source ~/.env.zsh
 # Use additional Git repositories pulled in with `z4h install`.
 z4h load   ohmyzsh/ohmyzsh/plugins/autojump
 z4h load   ohmyzsh/ohmyzsh/plugins/git
+z4h load   ohmyzsh/ohmyzsh/plugins/gitignore
+z4h load   ohmyzsh/ohmyzsh/plugins/httpie
+z4h load   ohmyzsh/ohmyzsh/plugins/sdk
 
 z4h load   garodriguezlp/dotfiles/plugins/jbang
+z4h load   garodriguezlp/dotfiles/plugins/key-bindings
+z4h load   garodriguezlp/dotfiles/plugins/sdk
+
+z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
+z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
+
+# In order to avoid conflicts with `sdkman` this needs to be loaded after
+z4h load   ohmyzsh/ohmyzsh/plugins/jenv
 
 z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
 
