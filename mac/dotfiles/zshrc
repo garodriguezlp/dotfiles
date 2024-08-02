@@ -10,15 +10,14 @@ zstyle ':z4h:' auto-update      'no'
 # Ask whether to auto-update this often; has no effect if auto-update is 'no'.
 zstyle ':z4h:' auto-update-days '28'
 
-# Move prompt to the bottom when zsh starts and on Ctrl+L.
-zstyle ':z4h:' prompt-at-bottom 'no'
-
 # Keyboard type: 'mac' or 'pc'.
 zstyle ':z4h:bindkey' keyboard  'mac'
 
 # Start tmux if not already in tmux.
 zstyle ':z4h:' start-tmux command tmux -u new
-# zstyle ':z4h:' start-tmux system
+
+# Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
+zstyle ':z4h:' prompt-at-bottom 'no'
 
 # Mark up shell's output with semantic information.
 zstyle ':z4h:' term-shell-integration 'yes'
@@ -71,45 +70,12 @@ export GPG_TTY=$TTY
 z4h source ~/.env.zsh
 
 # Use additional Git repositories pulled in with `z4h install`.
-#
-# This is just an example that you should delete. It does nothing useful.
-z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
-z4h source ohmyzsh/ohmyzsh/lib/git.zsh  # source an individual file
-z4h load   ohmyzsh/ohmyzsh/plugins/aliases
 z4h load   ohmyzsh/ohmyzsh/plugins/autojump
-z4h load   ohmyzsh/ohmyzsh/plugins/brew
-z4h load   ohmyzsh/ohmyzsh/plugins/common-aliases
-z4h load   ohmyzsh/ohmyzsh/plugins/direnv
-z4h load   ohmyzsh/ohmyzsh/plugins/extract
-z4h load   ohmyzsh/ohmyzsh/plugins/fzf
 z4h load   ohmyzsh/ohmyzsh/plugins/git
-z4h load   ohmyzsh/ohmyzsh/plugins/github
-z4h load   ohmyzsh/ohmyzsh/plugins/gitignore
-z4h load   ohmyzsh/ohmyzsh/plugins/gradle
-z4h load   ohmyzsh/ohmyzsh/plugins/httpie
-z4h load   ohmyzsh/ohmyzsh/plugins/mvn
-z4h load   ohmyzsh/ohmyzsh/plugins/nvm
-z4h load   ohmyzsh/ohmyzsh/plugins/sdk
-z4h load   ohmyzsh/ohmyzsh/plugins/thefuck
-z4h load   ohmyzsh/ohmyzsh/plugins/tmux
-z4h load   ohmyzsh/ohmyzsh/plugins/chruby
-z4h load   ohmyzsh/ohmyzsh/plugins/web-search
 
-z4h load   garodriguezlp/dotfiles/plugins/fzf
-z4h load   garodriguezlp/dotfiles/plugins/jbang
-z4h load   garodriguezlp/dotfiles/plugins/key-bindings
-z4h load   garodriguezlp/dotfiles/plugins/milli-misc
-z4h load   garodriguezlp/dotfiles/plugins/milli-cli
-z4h load   garodriguezlp/dotfiles/plugins/nvim
-z4h load   garodriguezlp/dotfiles/plugins/sdk
-z4h load   garodriguezlp/dotfiles/plugins/fun
-z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
-z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
+z4h load   garodriguezlp/dotfiles/plugins
 
-z4h source   $HOME/.secrets.zsh
-
-# In order to avoid conflicts with `sdkman` this needs to be loaded after
-z4h load   ohmyzsh/ohmyzsh/plugins/jenv
+z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
 
 # Define key bindings.
 z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
@@ -136,15 +102,20 @@ alias tree='tree -a -I .git'
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
 
-z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
-
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
-# Mino mobile
-RUBIES+=($(brew --prefix)/opt/ruby@*)
-chruby ruby@3.1
+# Source bash completions from a custom folder
+if [[ -d $HOME/.bash_completions ]]; then
+  for file in $HOME/.bash_completions/*; do
+    [[ -f "$file" && -r "$file" ]] && source "$file"
+  done
+fi
 
-# @todo: make this a plugin
-eval "$(gh copilot alias -- zsh)"
+# Add custom zsh completions directory to fpath
+if [[ -d $HOME/.zsh_completions ]]; then
+  fpath=($HOME/.zsh_completions $fpath)
+#   autoload -Uz compinit
+#   compinit
+fi
