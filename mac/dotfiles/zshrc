@@ -73,7 +73,7 @@ z4h source ~/.env.zsh
 z4h load   ohmyzsh/ohmyzsh/plugins/autojump
 z4h load   ohmyzsh/ohmyzsh/plugins/git
 
-z4h load   garodriguezlp/dotfiles/plugins
+z4h load   garodriguezlp/dotfiles/plugins/jbang
 
 z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
 
