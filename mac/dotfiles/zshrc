@@ -91,6 +91,8 @@ z4h load   ohmyzsh/ohmyzsh/plugins/jenv
 
 z4h source MohamedElashri/exa-zsh/exa-zsh.plugin.zsh
 
+z4h source -c ~/.zsh_functions/*.zsh
+
 # Define key bindings.
 z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
 z4h bindkey redo Option+/            # redo the last undone command line change
@@ -130,6 +132,4 @@ fi
 # Add custom zsh completions directory to fpath
 if [[ -d $HOME/.zsh_completions ]]; then
   fpath=($HOME/.zsh_completions $fpath)
-#   autoload -Uz compinit
-#   compinit
 fi
