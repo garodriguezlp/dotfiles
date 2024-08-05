@@ -28,11 +28,12 @@
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
 
-# Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+  name = "autocomplete"
+  auto_completion_return_key_behavior = "smart"
+  auto_completion_tab_key_behavior = "smart"
+  auto_completion_complete_with_key_sequence = "jk"
+  auto_completion_complete_with_key_sequence_delay = 0.1
 
 [[layers]]
   name = "denite"
