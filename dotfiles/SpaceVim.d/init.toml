@@ -28,6 +28,9 @@
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
 
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+
 [[layers]]
   name = "autocomplete"
   auto_completion_return_key_behavior = "smart"
@@ -37,6 +40,9 @@
 
 [[layers]]
   name = "denite"
+
+[[layers]]
+  name = "git"
 
 [[custom_plugins]]
   repo = "github/copilot.vim"
