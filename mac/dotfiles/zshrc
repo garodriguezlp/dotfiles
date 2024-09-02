@@ -70,6 +70,9 @@ export GPG_TTY=$TTY
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
 
+# Source oh-my-zsh libraries
+z4h source ohmyzsh/ohmyzsh/lib/git.zsh
+
 # Use additional Git repositories pulled in with `z4h install`.
 z4h load   ohmyzsh/ohmyzsh/plugins/autojump
 z4h load   ohmyzsh/ohmyzsh/plugins/git
