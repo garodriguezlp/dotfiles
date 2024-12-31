@@ -46,4 +46,15 @@
 
 [[custom_plugins]]
   repo = "github/copilot.vim"
+
+[[custom_plugins]]
+  repo = "github/copilot.vim"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "junegunn/fzf"
   merged = false
+
+[[custom_plugins]]
+  repo = "junegunn/fzf.vim"
+  merged = 0

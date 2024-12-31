@@ -85,10 +85,6 @@ z4h load   -c garodriguezlp/dotfiles/plugins/jbang
 z4h load   -c garodriguezlp/dotfiles/plugins/key-bindings
 z4h load   -c garodriguezlp/dotfiles/plugins/sdk
 
-z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-app
-z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli-glab
-z4h load   $HOME/src/milli/gustavo/zsh-plugins/milli
-
 # In order to avoid conflicts with `sdkman` this needs to be loaded after
 z4h load   ohmyzsh/ohmyzsh/plugins/jenv
 
