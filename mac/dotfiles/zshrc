@@ -31,7 +31,7 @@ zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
 zstyle ':z4h:fzf-complete' fzf-bindings tab:repeat
 
 # Enable direnv to automatically source .envrc files.
-zstyle ':z4h:direnv'         enable 'no'
+zstyle ':z4h:direnv'         enable 'yes'
 # Show "loading" and "unloading" notifications from direnv.
 zstyle ':z4h:direnv:success' notify 'yes'
 
@@ -67,6 +67,11 @@ path=(~/bin $path)
 # Export environment variables.
 export GPG_TTY=$TTY
 
+# lpass plugin configuration.
+lpass_load_env_config=(
+    "FOO_LPASS:GITHUB_PAT_JBANG_CATALOG"
+)
+
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
 
@@ -84,6 +89,8 @@ z4h load   ohmyzsh/ohmyzsh/plugins/chruby
 z4h load   -c garodriguezlp/dotfiles/plugins/jbang
 z4h load   -c garodriguezlp/dotfiles/plugins/key-bindings
 z4h load   -c garodriguezlp/dotfiles/plugins/sdk
+
+z4h load   -c garodriguezlp/dotfiles/plugins/lpass
 
 # In order to avoid conflicts with `sdkman` this needs to be loaded after
 z4h load   ohmyzsh/ohmyzsh/plugins/jenv
